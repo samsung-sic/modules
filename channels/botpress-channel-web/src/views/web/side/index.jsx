@@ -209,6 +209,7 @@ export default class Side extends React.Component {
 
   renderComposer() {
     const name = this.props.config.botName || 'Bot'
+    const placeholder = this.props.config.placeholder || 'Reply to ' + name
 
     return (
       <div
@@ -219,7 +220,7 @@ export default class Side extends React.Component {
       >
         <div className={style['flex-column']}>
           <Input
-            placeholder={'Reply to ' + name}
+            placeholder={placeholder}
             send={this.props.onTextSend}
             change={this.props.onTextChanged}
             text={this.props.text}
